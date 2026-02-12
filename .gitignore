@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+venv/
+.env
+.env.*
+
+# OS / Editor
+.DS_Store
+.vscode/
+
+# DB local (si aún existe)
+*.db
+*.sqlite3
+
+# Model artifacts (opcional)
+# Si tu modelo .h5 pesa mucho, NO lo subas. Mejor usar Releases o Drive.
+# model/*.h5
+
+# Logs
+*.log

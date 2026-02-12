@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Cell Classifier - Login</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="bg-dark">
+    <div class="layout-center">
+        <div class="card card-lg">
+            <h1 class="title">🩸 Blood Cell Classifier</h1>
+            <p class="subtitle">Inicia sesión para usar el clasificador</p>
+
+            <form id="loginForm" class="form-vertical">
+                <label>Usuario</label>
+                <input type="text" id="username" required>
+
+                <label>Contraseña</label>
+                <input type="password" id="password" required>
+
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <p id="loginMessage" class="helper-text"></p>
+            </form>
+
+            <div class="info-box">
+                <p><strong>Nota:</strong> El primer usuario registrado se convierte en <strong>admin</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

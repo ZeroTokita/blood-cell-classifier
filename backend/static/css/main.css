@@ -1,0 +1,287 @@
+/* ====== RESET BÁSICO ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #f5f5f5;
+}
+
+.bg-dark {
+    background: radial-gradient(circle at top, #2b2b3d, #050513);
+    min-height: 100vh;
+}
+
+/* ====== LAYOUTS ====== */
+.layout-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-layout {
+    max-width: 1100px;
+    margin: 5rem auto 2rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: 1.5rem;
+}
+
+.admin-layout {
+    max-width: 1200px;
+    margin: 5rem auto 2rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    grid-template-areas:
+        "users stats"
+        "users preds";
+}
+
+.admin-users    { grid-area: users; }
+.admin-stats    { grid-area: stats; }
+.admin-predictions { grid-area: preds; }
+
+/* ====== TOPBAR ====== */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 1.5rem;
+    background: rgba(5, 5, 20, 0.95);
+    border-bottom: 1px solid #2c2c3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.topbar-left, .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-text {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* ====== CARDS ====== */
+.card {
+    background: #151525;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card-lg {
+    max-width: 420px;
+    width: 100%;
+}
+
+/* ====== TIPOGRAFÍA ====== */
+.title {
+    font-size: 1.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    margin-bottom: 1.5rem;
+    color: #bbbbdd;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+/* ====== FORMULARIO ====== */
+.form-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #d3d3f5;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    padding: 0.55rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #32324a;
+    background: #0c0c18;
+    color: #f5f5ff;
+    font-size: 0.95rem;
+}
+
+input[type="file"] {
+    padding: 0.35rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff4b83;
+}
+
+/* ====== BOTONES ====== */
+.btn {
+    border-radius: 999px;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff4b83, #ff8050);
+    color: white;
+    box-shadow: 0 12px 35px rgba(255, 75, 131, 0.35);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: default;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px rgba(255, 75, 131, 0.45);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ff4b83;
+    color: #ff9ac1;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 75, 131, 0.12);
+}
+
+/* ====== INFO / AYUDA ====== */
+.info-box {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #c0c0e0;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.helper-text {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* ====== PREVIEW IMAGEN ====== */
+.preview-wrapper {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px dashed #3a3a55;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.preview {
+    max-width: 100%;
+    max-height: 240px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* ====== RESULT BOX ====== */
+.result-box {
+    margin-top: 0.9rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(21, 255, 151, 0.07);
+    border: 1px solid rgba(21, 255, 151, 0.45);
+    font-size: 0.95rem;
+}
+
+/* ====== TABLAS ====== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    font-size: 0.88rem;
+}
+
+.table th,
+.table td {
+    padding: 0.45rem 0.55rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+}
+
+.table th {
+    font-weight: 600;
+    color: #cfd0ff;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ====== STATS BOX ====== */
+.stats-box {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.stats-box .stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: #c0c0e5;
+    font-size: 0.8rem;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+    .main-layout,
+    .admin-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "users" "stats" "preds";
+        margin-top: 4.5rem;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Admin - Blood Cell Classifier</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="bg-dark">
+    <header class="topbar">
+        <div class="topbar-left">
+            <span class="logo-text">🛡️ Panel de Administrador</span>
+        </div>
+        <div class="topbar-right">
+            <span id="adminInfo"></span>
+            <button id="logoutBtn" class="btn btn-outline">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="admin-layout">
+        <section class="card admin-users">
+            <h2>Usuarios</h2>
+            <table class="table" id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Rol</th>
+                        <th>Creado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rellenado por JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card admin-stats">
+            <h2>Estadísticas generales</h2>
+            <div id="statsBox" class="stats-box">
+                <!-- Rellenado por JS -->
+            </div>
+        </section>
+
+        <section class="card admin-predictions">
+            <h2>Predicciones registradas</h2>
+            <table class="table" id="adminPredictionsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Tipo</th>
+                        <th>Confianza</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rellenado por JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/static/js/admin.js"></script>
+</body>
+</html>
